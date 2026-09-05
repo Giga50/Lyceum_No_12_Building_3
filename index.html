@@ -5,23 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лицей №12 Корпус 3 (Утяк)</title>
     <style>
-        body { font-family: sans-serif; margin: 0; background: #f4f6f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
-        .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 400px; width: 90%; }
-        h1 { color: #0b3c5d; font-size: 24px; margin-bottom: 5px; }
-        p { color: #666; font-size: 15px; margin-bottom: 25px; }
-        .btn-tg { display: block; background: #24A1DE; color: white; padding: 15px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; transition: 0.2s; box-shadow: 0 4px 10px rgba(36,161,222,0.3); }
-        .btn-tg:hover { background: #1d82b3; transform: scale(1.02); }
+        body { font-family: sans-serif; margin: 0; background: #f4f6f9; color: #333; line-height: 1.6; }
+        header { background: #0b3c5d; color: white; padding: 40px 20px; text-align: center; }
+        .container { max-width: 850px; margin: 20px auto; padding: 0 15px; }
+        
+        /* Стиль для кнопки ТГК */
+        .tg-banner { background: #e6f4fc; border: 2px solid #24A1DE; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 30px; }
+        .btn-tg { display: inline-block; background: #24A1DE; color: white; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px; font-size: 16px; }
+        .btn-tg:hover { background: #1d82b3; }
+
+        h2 { color: #0b3c5d; border-bottom: 2px solid #328cc1; padding-bottom: 5px; margin-top: 35px; }
+        
+        /* Блоки новостей */
+        .news { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .date { color: #328cc1; font-size: 13px; font-weight: bold; margin-bottom: 5px; }
+        .news h3 { margin: 0 0 10px 0; color: #0b3c5d; }
+        
+        /* Сведения об организации */
+        .grid-docs { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .doc-link { background: white; padding: 12px; border-radius: 6px; text-decoration: none; color: #333; border-left: 4px solid #0b3c5d; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .doc-link:hover { background: #fdfdfd; color: #328cc1; }
+
+        footer { background: #333; color: white; text-align: center; padding: 20px; font-size: 13px; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Лицей №12 — Корпус №3</h1>
+    <header>
+        <h1>МБОУ Лицей №12 — Корпус №3</h1>
         <p>г. Курган, микрорайон Утяк</p>
+    </header>
+
+    <div class="container">
         
-        <!-- ЗАМЕНИТЕ ССЫЛКУ НИЖЕ НА ВАШ ТГ-КАНАЛ -->
-        <a href="https://t.me" target="_blank" class="btn-tg">📢 Наш Telegram-канал</a>
+        <!-- Блок Телеграм-канала -->
+        <div class="tg-banner">
+            <h3>📢 Наш официальный Telegram-канал</h3>
+            <p>Самые оперативные новости, фотоотчеты и объявления. Нажал — и сразу подписался!</p>
+            <!-- Замените ссылку ниже на ваш ТГК -->
+            <a href="https://t.me" target="_blank" class="btn-tg">Перейти в Telegram</a>
+        </div>
+
+        <!-- Лента новостей -->
+        <h2>Последние новости</h2>
+        
+        <div class="news">
+            <div class="date">05.09.2026</div>
+            <h3>Запуск официального сайта и ТГК</h3>
+            <p>У нашего корпуса появились современные цифровые площадки! Теперь узнавать о событиях школы стало гораздо удобнее.</p>
+        </div>
+
+        <div class="news">
+            <div class="date">01.09.2026</div>
+            <h3>Торжественная линейка</h3>
+            <p>Поздравляем всех учеников, родителей и учителей корпуса Утяк с Днем знаний! Желаем отличных оценок и легкой учебы.</p>
+        </div>
+
+        <!-- Официальные разделы для школы -->
+        <h2>Сведения об образовательной организации</h2>
+        <div class="grid-docs">
+            <a href="#" class="doc-link">📄 Основные сведения</a>
+            <a href="#" class="doc-link">📄 Структура и органы управления</a>
+            <a href="#" class="doc-link">📄 Документы (Устав, Отчеты)</a>
+            <a href="#" class="doc-link">📄 Образовательные программы</a>
+            <a href="#" class="doc-link">📄 Руководство и педагогический состав</a>
+            <a href="#" class="doc-link">📄 Материально-техническое обеспечение</a>
+        </div>
+
+        <!-- Контакты -->
+        <h2>Контакты</h2>
+        <p>📍 <strong>Адрес:</strong> 640000, Курганская область, г. Курган, микрорайон Утяк</p>
+        <p>📧 <strong>Email:</strong> <em>Будет добавлен позже</em></p>
+        <p>📞 <strong>Телефон:</strong> Приемная Лицея №12</p>
+
     </div>
+
+    <footer>
+        <p>&copy; 2026 Официальный сайт Корпуса №3 Лицея №12 г. Кургана</p>
+    </footer>
 
 </body>
 </html>
