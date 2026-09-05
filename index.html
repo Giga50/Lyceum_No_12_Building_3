@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лицей № 12 — Корпус №3</title>
-    <!-- Прямая ссылка на надежную иконку для вкладки браузера -->
+    
+    <!-- Сразу три сверхнадежных источника для иконки во вкладке -->
+    <link rel="icon" type="image/x-icon" href="https://gu-st.ru">
     <link rel="icon" type="image/png" href="https://icons8.com">
+    <link rel="apple-touch-icon" href="https://icons8.com">
+
     <style>
         * { box-sizing: border-box; }
         body { 
@@ -35,7 +39,6 @@
         }
         .top-bar a:hover { background: #d0e4f7; }
 
-        /* Надежная шапка с плотным синим градиентом поверх фото */
         header { 
             position: relative;
             background: linear-gradient(135deg, rgba(0, 50, 110, 0.85) 0%, rgba(10, 70, 140, 0.85) 100%), 
@@ -79,10 +82,7 @@
             color: #00529B; 
             font-size: 22px; 
             margin-top: 0; 
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            margin-bottom: 20px;
         }
 
         .news-container {
@@ -91,7 +91,7 @@
             gap: 20px;
         }
         
-        .news-item { 
+        .card-box { 
             background: #ffffff; 
             border-radius: 24px;
             padding: 25px; 
@@ -99,10 +99,11 @@
             border: 1px solid #e1e8ed; 
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .news-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+        .card-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
         }
+        
         .news-date { 
             color: #1565C0; 
             font-size: 13px; 
@@ -115,16 +116,8 @@
             padding: 5px 14px;
             border-radius: 50px;
         }
-        .news-item h3 { 
-            margin: 0 0 10px 0; 
-            color: #00529B; 
-            font-size: 19px; 
-        }
-        .news-item p { 
-            margin: 0; 
-            color: #4a5568; 
-            font-size: 15px; 
-        }
+        .card-box h3 { margin: 0 0 10px 0; color: #00529B; font-size: 19px; }
+        .card-box p { margin: 0; color: #4a5568; font-size: 15px; }
 
         footer { 
             background: #0b1f33; 
@@ -136,10 +129,7 @@
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
         }
-        footer p { 
-            margin: 8px 0; 
-            opacity: 0.9; 
-        }
+        footer p { margin: 8px 0; opacity: 0.9; }
         .footer-contacts {
             display: flex;
             justify-content: center;
@@ -152,9 +142,6 @@
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 13px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
         }
     </style>
 </head>
@@ -171,29 +158,33 @@
     </header>
 
     <div class="container">
-        <h2>✨ Новости и события</h2>
         
+        <h2>✨ Новости и события</h2>
         <div class="news-container">
-
-            <div class="news-item">
+            
+            <!-- Новость 1 -->
+            <div class="card-box">
                 <div class="news-date">📅 04.09.2026</div>
                 <h3>День здоровья в корпусе</h3>
                 <p>Сегодня в нашем корпусе прошёл весёлый День здоровья! Все ученики с 5 по 9 классы активно занимались в спортивном зале, соревнуясь в силе и ловкости. А для самых маленьких — наших младшеклассников — был организован отличный пикник на свежем воздухе.</p>
             </div>
 
-            <div class="news-item">
+            <!-- Новость 2 -->
+            <div class="card-box">
                 <div class="news-date">📅 01.09.2026</div>
                 <h3>Запуск нового сайта</h3>
                 <p>Мы рады сообщить об успешном запуске легкого и современного веб-ресурса для Корпуса №3 в микрорайоне Утяк. Здесь всегда будет актуальная информация.</p>
             </div>
 
-            <div class="news-item">
+            <!-- Новость 3 (Вернул на место!) -->
+            <div class="card-box">
                 <div class="news-date">📅 01.09.2026</div>
-                <h3>Торжественная линейка</h3>
+                <h3>Торжественная линейка «День Знаний»</h3>
                 <p>Поздравляем всех учеников, их родителей и наш замечательный педагогический коллектив с Днем знаний и началом нового учебного года! Желаем легкого пути к новым вершинам.</p>
             </div>
 
         </div>
+
     </div>
 
     <footer>
