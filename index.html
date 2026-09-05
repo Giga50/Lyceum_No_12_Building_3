@@ -4,78 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лицей № 12 — Корпус №3</title>
-    <!-- Исправленная иконка школы для вкладки браузера -->
     <link rel="icon" type="image/png" href="https://icons8.com">
     <style>
-        :root {
-            --gos-blue: #00529B;
-            --gos-bg: #EEF2F5;
-            --gos-text: #0B1F33;
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            margin: 0; 
+            background: #f0f4f8; 
+            color: #1a2a3a; 
+            line-height: 1.6; 
         }
-        body { font-family: -apple-system, sans-serif; margin: 0; background: var(--gos-bg); color: var(--gos-text); line-height: 1.5; }
-        .gos-top { background: #FFFFFF; border-bottom: 1px solid #D5DBE0; padding: 10px 20px; font-size: 13px; display: flex; justify-content: space-between; }
-        .gos-top a { color: #556675; text-decoration: none; font-weight: 500; }
-        .gos-top a:hover { text-decoration: underline; }
-        header { background: var(--gos-blue); color: white; padding: 30px 20px; text-align: center; }
-        header h1 { font-size: 22px; margin: 0 0 5px 0; }
-        header p { font-size: 14px; margin: 0; opacity: 0.85; }
-        .container { max-width: 700px; margin: 25px auto; padding: 0 20px; }
-        main { background: #FFFFFF; border-radius: 12px; padding: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); border: 1px solid #E3E8EC; }
-        h2 { color: var(--gos-blue); font-size: 19px; margin-top: 0; border-bottom: 2px solid #EEF2F5; padding-bottom: 8px; }
-        .news-item { border-bottom: 1px solid #EEF2F5; padding-bottom: 15px; margin-bottom: 15px; }
-        .news-item:last-child { border: none; padding-bottom: 0; margin-bottom: 0; }
-        .news-date { color: #707E8C; font-size: 13px; margin-bottom: 3px; }
-        .news-item h3 { margin: 0 0 5px 0; color: #1565C0; font-size: 16px; }
-        .news-item p { margin: 0; color: #394856; font-size: 14px; }
-        footer { background: #0B1F33; color: white; padding: 30px 20px; font-size: 13px; margin-top: 40px; text-align: center; }
-        footer p { margin: 5px 0; opacity: 0.8; }
+        
+        /* Полностью закругленная верхняя панель */
+        .top-bar { 
+            background: #ffffff; 
+            border-bottom: 1px solid #d0dbe5; 
+            padding: 12px 24px; 
+            font-size: 13px; 
+            display: flex; 
+            justify-content: space-between;
+        }
+        .top-bar a { 
+            color: #00529B; 
+            text-decoration: none; 
+            font-weight: 600;
+            background: #e6f0fa;
+            padding: 6px 14px;
+            border-radius: 20px; /* Максимальное закругление */
+            transition: background 0.2s;
+        }
+        .top-bar a:hover { background: #d0e4f7; }
+
+        /* Шапка с закругленными углами снизу и умным фоном школы */
+        header { 
+            position: relative;
+            background: linear-gradient(135deg, rgba(0,82,155,0.92) 0%, rgba(21,101,192,0.85) 100%), 
+                        url('school.jpg') center/cover no-repeat; /* Подхватывает ваш файл school.jpg */
+            background-color: #00529B; /* Цвет, если фото еще не загружено */
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
+            box-shadow: 0 4px 20px rgba(0,52,155,0.15);
+            border-bottom-left-radius: 30px; /* Сильное закругление низа шапки */
+            border-bottom-right-radius: 30px;
+        }
+        header h1 { 
+            font-size: 28px; 
+            margin: 0 0 8px 0; 
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        header p { 
+            font-size: 15px; 
+            margin: 0; 
+            opacity: 0.95;
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px; /* Полное закругление подзаголовка */
+            backdrop-filter: blur(5px);
+        }
+
+        .container { 
+            max-width: 750px; 
+            margin: 30px auto; 
+            padding: 0 20px; 
+        }
+        
+        h2 { 
+            color: #00529B; 
+            font-size: 22px; 
+            margin-top: 0; 
+            margin-bottom: 20px;
+        }
+
+        .news-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        /* Супер-закругленные карточки */
+        .news-item { 
+            background: #ffffff; 
+            border-radius: 24px; /* Мягкие круглые углы */
+            padding: 25px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03); 
+            border: 1px solid #e1e8ed; 
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .news-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+        }
+        .news-date { 
+            color: #1565C0; 
+            font-size: 13px; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+            background: #e6f0fa;
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 50px; /* Полное закругление даты */
+        }
+        .news-item h3 { 
+            margin: 0 0 10px 0; 
+            color: #00529B; 
+            font-size: 19px; 
+        }
+        .news-item p { 
+            margin: 0; 
+            color: #4a5568; 
+            font-size: 15px; 
+        }
+
+        /* Круглый и стильный подвал */
+        footer { 
+            background: #0b1f33; 
+            color: white; 
+            padding: 40px 20px; 
+            font-size: 14px; 
+            margin-top: 60px; 
+            text-align: center;
+            border-top-left-radius: 30px; /* Скругление краев подвала */
+            border-top-right-radius: 30px;
+        }
+        footer p { margin: 8px 0; opacity: 0.9; }
+        .footer-contacts {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .footer-contacts span {
+            background: rgba(255,255,255,0.07);
+            padding: 8px 16px;
+            border-radius: 20px; /* Круглые плашки контактов */
+            font-size: 13px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="gos-top">
-        <span>Госуслуги / Решаем вместе</span>
-        <a href="https://eschool.gov45.ru/authorize" target="_blank">Электронный дневник</a>
+    <div class="top-bar">
+        <span style="align-self: center; font-weight: 500;">Лицей №12 (мкр. Утяк)</span>
+        <a href="https://gov45.ru" target="_blank">🔐 Электронный дневник</a>
     </div>
 
     <header>
         <h1>МБОУ г. Кургана "Лицей № 12"</h1>
-        <p>МБОУ Лицей номер 12 корпус 3</p>
+        <p>Обособленное подразделение — Корпус №3</p>
     </header>
 
     <div class="container">
-        <!-- Лента новостей -->
-        <main>
-            <h2>Новости и события</h2>
-            <div id="newsContainer">
+        <h2>✨ Новости и события</h2>
+        
+        <div class="news-container">
 
-                <!-- Новая новость сверху -->
-                <div class="news-item">
-                    <div class="news-date">04.09.2026</div>
-                    <h3>День здоровья</h3>
-                    <p>Сегодня в корпусе прошёл День здоровья! Все классы с 5 по 9 занимались в спортивном зале, а у младшеклассников был организован весёлый пикник на свежем воздухе.</p>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">01.09.2026</div>
-                    <h3>Запуск информационного сайта</h3>
-                    <p>Мы успешно запустили легкий информационный веб-ресурс для нашего корпуса в микрорайоне Утяк.</p>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">01.09.2026</div>
-                    <h3>Торжественная линейка «День Знаний»</h3>
-                    <p>Поздравляем всех учащихся, педагогов и родителей с началом нового учебного года!</p>
-                </div>
-
+            <div class="news-item">
+                <div class="news-date">📅 04.09.2026</div>
+                <h3>День здоровья в корпусе</h3>
+                <p>Сегодня в нашем корпусе прошёл весёлый День здоровья! Все ученики с 5 по 9 классы активно занимались в спортивном зале, соревнуясь в силе и ловкости. А для самых маленьких — наших младшеклассников — был организован отличный пикник на свежем воздухе.</p>
             </div>
-        </main>
+
+            <div class="news-item">
+                <div class="news-date">📅 01.09.2026</div>
+                <h3>Запуск нового сайта</h3>
+                <p>Мы рады сообщить об успешном запуске легкого и современного веб-ресурса для Корпуса №3 в микрорайоне Утяк. Здесь всегда будет актуальная информация.</p>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">📅 01.09.2026</div>
+                <h3>Торжественная линейка</h3>
+                <p>Поздравляем всех учеников, их родителей и наш замечательный педагогический коллектив с Днем знаний и началом нового учебного года! Желаем легкого пути к новым вершинам.</p>
+            </div>
+
+        </div>
     </div>
 
     <footer>
-        <p><strong>Адрес:</strong> г. Курган, микрорайон Утяк, ул. Советская, 41</p>
-        <p>📞 Тел: 8 (3522) 23-95-94 | 📧 Email: kurgan_licey12@kurgan.gov45.ru</p>
-        <p style="margin-top:15px; opacity:0.5;">&copy; Официальный сайт школы номер 12 корпус 3</p>
+        <p><strong>📍 Адрес:</strong> г. Курган, микрорайон Утяк, ул. Советская, 41</p>
+        <div class="footer-contacts">
+            <span>📞 <strong>Тел:</strong> 8 (3522) 23-95-94</span>
+            <span>📧 <strong>Email:</strong> kurgan_licey12@kurgan.gov45.ru</span>
+        </div>
+        <p style="margin-top:30px; opacity:0.3; font-size:11px;">&copy; 2026 Лицей № 12 г. Кургана. Собрано на GitHub Pages</p>
     </footer>
 
 </body>
