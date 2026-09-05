@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лицей № 12 — Корпус №3</title>
+    <!-- Прямая ссылка на надежную иконку для вкладки браузера -->
     <link rel="icon" type="image/png" href="https://icons8.com">
     <style>
         * { box-sizing: border-box; }
@@ -34,44 +35,38 @@
         }
         .top-bar a:hover { background: #d0e4f7; }
 
-        /* Улучшенная шапка с усиленным контрастом для текста */
+        /* Надежная шапка с плотным синим градиентом поверх фото */
         header { 
             position: relative;
-            background: linear-gradient(135deg, rgba(0, 40, 80, 0.85) 0%, rgba(10, 60, 120, 0.75) 100%), 
+            background: linear-gradient(135deg, rgba(0, 50, 110, 0.85) 0%, rgba(10, 70, 140, 0.85) 100%), 
                         url('school.jpg') center/cover no-repeat;
             background-color: #00529B;
             color: white; 
-            padding: 70px 20px; 
+            padding: 60px 20px; 
             text-align: center; 
             box-shadow: 0 4px 20px rgba(0,52,155,0.15);
             border-bottom-left-radius: 30px;
             border-bottom-right-radius: 30px;
         }
-        
-        /* Контейнер для текста в шапке, чтобы он читался на любом фото */
-        .header-text-wrapper {
-            background: rgba(0, 30, 60, 0.5);
-            display: inline-block;
-            padding: 25px 40px;
-            border-radius: 24px;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-        }
 
         header h1 { 
-            font-size: 28px; 
-            margin: 0 0 10px 0; 
+            font-size: 32px; 
+            margin: 0 0 12px 0; 
             font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            color: #ffffff;
         }
         header p { 
             font-size: 15px; 
             margin: 0; 
-            opacity: 0.95;
-            background: rgba(255,255,255,0.15);
+            font-weight: 500;
+            background: rgba(255,255,255,0.2);
             display: inline-block;
-            padding: 6px 16px;
+            padding: 6px 18px;
             border-radius: 20px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
 
         .container { 
@@ -80,7 +75,6 @@
             padding: 0 20px; 
         }
         
-        /* Красивый и ровный заголовок новостей */
         h2 { 
             color: #00529B; 
             font-size: 22px; 
@@ -89,10 +83,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-        h2 img {
-            width: 24px;
-            height: 24px;
         }
 
         .news-container {
@@ -125,10 +115,6 @@
             padding: 5px 14px;
             border-radius: 50px;
         }
-        .news-date img {
-            width: 14px;
-            height: 14px;
-        }
         .news-item h3 { 
             margin: 0 0 10px 0; 
             color: #00529B; 
@@ -150,7 +136,10 @@
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
         }
-        footer p { margin: 8px 0; opacity: 0.9; }
+        footer p { 
+            margin: 8px 0; 
+            opacity: 0.9; 
+        }
         .footer-contacts {
             display: flex;
             justify-content: center;
@@ -167,10 +156,6 @@
             align-items: center;
             gap: 6px;
         }
-        .footer-contacts img {
-            width: 16px;
-            height: 16px;
-        }
     </style>
 </head>
 <body>
@@ -181,31 +166,29 @@
     </div>
 
     <header>
-        <div class="header-text-wrapper">
-            <h1>МБОУ г. Кургана "Лицей № 12"</h1>
-            <p>Обособленное подразделение — Корпус №3</p>
-        </div>
+        <h1>МБОУ г. Кургана "Лицей № 12"</h1>
+        <p>Обособленное подразделение — Корпус №3</p>
     </header>
 
     <div class="container">
-        <h2><img src="https://icons8.com" alt="✨"> Новости и события</h2>
+        <h2>✨ Новости и события</h2>
         
         <div class="news-container">
 
             <div class="news-item">
-                <div class="news-date"><img src="https://icons8.com" alt="📅"> 04.09.2026</div>
+                <div class="news-date">📅 04.09.2026</div>
                 <h3>День здоровья в корпусе</h3>
                 <p>Сегодня в нашем корпусе прошёл весёлый День здоровья! Все ученики с 5 по 9 классы активно занимались в спортивном зале, соревнуясь в силе и ловкости. А для самых маленьких — наших младшеклассников — был организован отличный пикник на свежем воздухе.</p>
             </div>
 
             <div class="news-item">
-                <div class="news-date"><img src="https://icons8.com" alt="📅"> 01.09.2026</div>
+                <div class="news-date">📅 01.09.2026</div>
                 <h3>Запуск нового сайта</h3>
                 <p>Мы рады сообщить об успешном запуске легкого и современного веб-ресурса для Корпуса №3 в микрорайоне Утяк. Здесь всегда будет актуальная информация.</p>
             </div>
 
             <div class="news-item">
-                <div class="news-date"><img src="https://icons8.com" alt="📅"> 01.09.2026</div>
+                <div class="news-date">📅 01.09.2026</div>
                 <h3>Торжественная линейка</h3>
                 <p>Поздравляем всех учеников, их родителей и наш замечательный педагогический коллектив с Днем знаний и началом нового учебного года! Желаем легкого пути к новым вершинам.</p>
             </div>
@@ -214,10 +197,10 @@
     </div>
 
     <footer>
-        <p><strong><img src="https://icons8.com" alt="📍" style="width:16px; height:16px; vertical-align:middle;"> Адрес:</strong> г. Курган, микрорайон Утяк, ул. Советская, 41</p>
+        <p><strong>📍 Адрес:</strong> г. Курган, микрорайон Утяк, ул. Советская, 41</p>
         <div class="footer-contacts">
-            <span><img src="https://icons8.com" alt="📞"> <strong>Тел:</strong> 8 (3522) 23-95-94</span>
-            <span><img src="https://icons8.com" alt="📧"> <strong>Email:</strong> kurgan_licey12@kurgan.gov45.ru</span>
+            <span>📞 <strong>Тел:</strong> 8 (3522) 23-95-94</span>
+            <span>✉️ <strong>Email:</strong> kurgan_licey12@kurgan.gov45.ru</span>
         </div>
         <p style="margin-top:30px; opacity:0.3; font-size:11px;">&copy; 2026 Лицей № 12 г. Кургана. Собрано на GitHub Pages</p>
     </footer>
