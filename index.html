@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лицей № 12 — Корпус №3</title>
-    <!-- Официальная иконка школы для вкладки браузера -->
+    <!-- Исправленная иконка школы для вкладки браузера -->
     <link rel="icon" type="image/png" href="https://icons8.com">
     <style>
         :root {
             --gos-blue: #00529B;
             --gos-bg: #EEF2F5;
             --gos-text: #0B1F33;
-            --tg-color: #24A1DE;
         }
         body { font-family: -apple-system, sans-serif; margin: 0; background: var(--gos-bg); color: var(--gos-text); line-height: 1.5; }
         .gos-top { background: #FFFFFF; border-bottom: 1px solid #D5DBE0; padding: 10px 20px; font-size: 13px; display: flex; justify-content: space-between; }
         .gos-top a { color: #556675; text-decoration: none; font-weight: 500; }
+        .gos-top a:hover { text-decoration: underline; }
         header { background: var(--gos-blue); color: white; padding: 30px 20px; text-align: center; }
         header h1 { font-size: 22px; margin: 0 0 5px 0; }
         header p { font-size: 14px; margin: 0; opacity: 0.85; }
         .container { max-width: 700px; margin: 25px auto; padding: 0 20px; }
-        .tg-card { background: #FFFFFF; border: 2px solid var(--tg-color); border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
-        .btn-tg { display: inline-block; background: var(--tg-color); color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; }
         main { background: #FFFFFF; border-radius: 12px; padding: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); border: 1px solid #E3E8EC; }
         h2 { color: var(--gos-blue); font-size: 19px; margin-top: 0; border-bottom: 2px solid #EEF2F5; padding-bottom: 8px; }
         .news-item { border-bottom: 1px solid #EEF2F5; padding-bottom: 15px; margin-bottom: 15px; }
@@ -46,37 +44,28 @@
     </header>
 
     <div class="container">
-        
-        <!-- Кнопка Телеграм-канала -->
-        <div class="tg-card">
-            <h3 style="margin:0 0 5px 0; color: var(--gos-blue);">📢 Наш Telegram-канал</h3>
-            <p style="margin:0; font-size:14px; color:#556675;">Нажмите на кнопку ниже, чтобы сразу перейти и подписаться на новости корпуса.</p>
-            <a href="https://t.me" target="_blank" class="btn-tg">👉 Подписаться в Telegram</a>
-        </div>
-
         <!-- Лента новостей -->
         <main>
             <h2>Новости и события</h2>
             <div id="newsContainer">
 
-                <!-- Начало блока новостей. Чтобы добавить новую, копируйте отсюда -->
+                <!-- Новая новость сверху -->
+                <div class="news-item">
+                    <div class="news-date">04.09.2026</div>
+                    <h3>День здоровья</h3>
+                    <p>Сегодня в корпусе прошёл День здоровья! Все классы с 5 по 9 занимались в спортивном зале, а у младшеклассников был организован весёлый пикник на свежем воздухе.</p>
+                </div>
+
                 <div class="news-item">
                     <div class="news-date">01.09.2026</div>
                     <h3>Запуск информационного сайта</h3>
-                    <p>Мы запустили обновленный легкий веб-ресурс и Telegram-канал для нашего корпуса в микрорайоне Утяк.</p>
+                    <p>Мы успешно запустили легкий информационный веб-ресурс для нашего корпуса в микрорайоне Утяк.</p>
                 </div>
 
                 <div class="news-item">
                     <div class="news-date">01.09.2026</div>
                     <h3>Торжественная линейка «День Знаний»</h3>
                     <p>Поздравляем всех учащихся, педагогов и родителей с началом нового учебного года!</p>
-                </div>
-                <!-- Конец блока новостей -->
-
-                 <div class="news-item">
-                    <div class="news-date">04.09.2026</div>
-                    <h3>День здоровья</h3>
-                    <p>Сегодня был день здоровья в котором все классы с 5 по 9 занимались в классе физкультуры,у младше класников был пикниу</p>
                 </div>
 
             </div>
