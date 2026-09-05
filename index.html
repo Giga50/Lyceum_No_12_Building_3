@@ -3,57 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МБОУ г. Кургана "Лицей № 12" — Корпус №3</title>
+    <title>Лицей № 12 — Корпус №3</title>
+    <!-- Официальная иконка школы для вкладки браузера -->
+    <link rel="icon" type="image/png" href="https://icons8.com">
     <style>
         :root {
             --gos-blue: #00529B;
-            --gos-light-blue: #1565C0;
             --gos-bg: #EEF2F5;
             --gos-text: #0B1F33;
             --tg-color: #24A1DE;
         }
-        
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; background: var(--gos-bg); color: var(--gos-text); line-height: 1.5; }
-        
-        .gos-top { background: #FFFFFF; border-bottom: 1px solid #D5DBE0; padding: 10px 20px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+        body { font-family: -apple-system, sans-serif; margin: 0; background: var(--gos-bg); color: var(--gos-text); line-height: 1.5; }
+        .gos-top { background: #FFFFFF; border-bottom: 1px solid #D5DBE0; padding: 10px 20px; font-size: 13px; display: flex; justify-content: space-between; }
         .gos-top a { color: #556675; text-decoration: none; font-weight: 500; }
-        .gos-top a:hover { text-decoration: underline; }
-
-        header { background: var(--gos-blue); color: white; padding: 30px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .header-container { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 20px; }
-        .emblem { font-size: 40px; background: rgba(255,255,255,0.1); width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
-        .header-info h1 { font-size: 22px; margin: 0 0 5px 0; font-weight: 700; letter-spacing: 0.5px; }
-        .header-info p { font-size: 14px; margin: 0; opacity: 0.85; }
-
-        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
-
-        .tg-card { background: #FFFFFF; border: 2px solid var(--tg-color); border-radius: 12px; padding: 25px; text-align: center; grid-column: 1 / -1; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .tg-card h2 { color: var(--gos-blue); margin-top: 0; font-size: 20px; }
-        .btn-tg { display: inline-block; background: var(--tg-color); color: white; padding: 14px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; margin-top: 10px; transition: background 0.2s; box-shadow: 0 4px 10px rgba(36,161,222,0.25); }
-        .btn-tg:hover { background: #1d82b3; }
-
-        main, aside { background: #FFFFFF; border-radius: 12px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #E3E8EC; }
-        h2.section-title { color: var(--gos-blue); font-size: 20px; margin-top: 0; border-bottom: 2px solid #E3E8EC; padding-bottom: 10px; margin-bottom: 20px; }
-
+        header { background: var(--gos-blue); color: white; padding: 30px 20px; text-align: center; }
+        header h1 { font-size: 22px; margin: 0 0 5px 0; }
+        header p { font-size: 14px; margin: 0; opacity: 0.85; }
+        .container { max-width: 700px; margin: 25px auto; padding: 0 20px; }
+        .tg-card { background: #FFFFFF; border: 2px solid var(--tg-color); border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .btn-tg { display: inline-block; background: var(--tg-color); color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; }
+        main { background: #FFFFFF; border-radius: 12px; padding: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); border: 1px solid #E3E8EC; }
+        h2 { color: var(--gos-blue); font-size: 19px; margin-top: 0; border-bottom: 2px solid #EEF2F5; padding-bottom: 8px; }
         .news-item { border-bottom: 1px solid #EEF2F5; padding-bottom: 15px; margin-bottom: 15px; }
         .news-item:last-child { border: none; padding-bottom: 0; margin-bottom: 0; }
-        .news-date { color: #707E8C; font-size: 13px; font-weight: 500; margin-bottom: 5px; }
-        .news-item h3 { margin: 0 0 8px 0; color: var(--gos-light-blue); font-size: 17px; }
-        .news-item p { margin: 0; color: #394856; font-size: 15px; }
-
-        .gov-links { display: flex; flex-direction: column; gap: 10px; }
-        .gov-btn { display: flex; align-items: center; background: #F4F7F9; color: var(--gos-text); padding: 12px 15px; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 500; border: 1px solid #E3E8EC; transition: 0.2s; }
-        .gov-btn:hover { background: #E9EEF2; color: var(--gos-light-blue); }
-
-        footer { background: #0B1F33; color: white; padding: 40px 20px; font-size: 14px; margin-top: 60px; }
-        .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .footer-col h4 { color: #FFFFFF; margin: 0 0 15px 0; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; }
-        .footer-col p { margin: 5px 0; opacity: 0.8; }
-        .footer-bottom { max-width: 1100px; margin: 30px auto 0 auto; text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.6; font-size: 13px; }
-
-        @media (max-width: 768px) {
-            .container { grid-template-columns: 1fr; }
-        }
+        .news-date { color: #707E8C; font-size: 13px; margin-bottom: 3px; }
+        .news-item h3 { margin: 0 0 5px 0; color: #1565C0; font-size: 16px; }
+        .news-item p { margin: 0; color: #394856; font-size: 14px; }
+        footer { background: #0B1F33; color: white; padding: 30px 20px; font-size: 13px; margin-top: 40px; text-align: center; }
+        footer p { margin: 5px 0; opacity: 0.8; }
     </style>
 </head>
 <body>
@@ -64,76 +41,54 @@
     </div>
 
     <header>
-        <div class="header-container">
-            <div class="emblem">🏛</div>
-            <div class="header-info">
-                <h1>МБОУ г. Кургана "Лицей № 12"</h1>
-                <p>Обособленное подразделение — Корпус №3 (мкр. Утяк)</p>
-            </div>
-        </div>
+        <h1>МБОУ г. Кургана "Лицей № 12"</h1>
+        <p>Обособленное подразделение — Корпус №3 (мкр. Утяк)</p>
     </header>
 
     <div class="container">
         
+        <!-- Кнопка Телеграм-канала -->
         <div class="tg-card">
-            <h2>📢 Официальный Telegram-канал Корпуса №3</h2>
-            <p>Переходите в наш канал, чтобы первыми узнавать о школьных событиях, расписании, кружках и смотреть фотографии с мероприятий!</p>
-            <!-- ЗАМЕНИТЕ ССЫЛКУ ТУТ НА ВАШ ТГК -->
-            <a href="https://t.me" target="_blank" class="btn-tg">Нажмите, чтобы подписаться</a>
+            <h3 style="margin:0 0 5px 0; color: var(--gos-blue);">📢 Наш Telegram-канал</h3>
+            <p style="margin:0; font-size:14px; color:#556675;">Нажмите на кнопку ниже, чтобы сразу перейти и подписаться на новости корпуса.</p>
+            <a href="https://t.me" target="_blank" class="btn-tg">👉 Подписаться в Telegram</a>
         </div>
 
+        <!-- Лента новостей -->
         <main>
-            <h2 class="section-title">Новости и события</h2>
-            
-            <div class="news-item">
-                <div class="news-date">05 сентября 2026</div>
-                <h3>Запуск нового информационного сайта</h3>
-                <p>Мы запустили обновленный веб-ресурс и Telegram-канал для нашего корпуса в микрорайоне Утяк. Всё для удобства родителей и учеников!</p>
-            </div>
+            <h2>Новости и события</h2>
+            <div id="newsContainer">
 
-            <div class="news-item">
-                <div class="news-date">01 сентября 2026</div>
-                <h3>Торжественная линейка «День Знаний»</h3>
-                <p>Поздравляем учащихся, педагогов и родителей с началом нового 2026-2027 учебного года! Особые поздравления нашим первоклассникам.</p>
+                <!-- Начало блока новостей. Чтобы добавить новую, копируйте отсюда -->
+                <div class="news-item">
+                    <div class="news-date">01.09.2026</div>
+                    <h3>Запуск информационного сайта</h3>
+                    <p>Мы запустили обновленный легкий веб-ресурс и Telegram-канал для нашего корпуса в микрорайоне Утяк.</p>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">01.09.2026</div>
+                    <h3>Торжественная линейка «День Знаний»</h3>
+                    <p>Поздравляем всех учащихся, педагогов и родителей с началом нового учебного года!</p>
+                </div>
+                <!-- Конец блока новостей -->
+
+                 <div class="news-item">
+                    <div class="news-date">04.09.2026</div>
+                    <h3>День здоровья</h3>
+                    <p>Сегодня был день здоровья в котором все классы с 5 по 9 занимались в классе физкультуры,у младше класников был пикниу</p>
+                </div>
+
             </div>
         </main>
-
-        <aside>
-            <h2 class="section-title">Сведения об ОО</h2>
-            <div class="gov-links">
-                <a href="#" class="gov-btn">📁 Основные сведения</a>
-                <a href="#" class="gov-btn">📁 Структура и органы управления</a>
-                <a href="#" class="gov-btn">📁 Документы и уставы</a>
-                <a href="#" class="gov-btn">📁 Образование</a>
-                <a href="#" class="gov-btn">📁 Организация питания</a>
-                <a href="#" class="gov-btn">📁 Руководство и педсостав</a>
-            </div>
-        </aside>
-
     </div>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Лицей №12 — Корпус №3</h4>
-                <p>Муниципальное бюджетное общеобразовательное учреждение города Кургана.</p>
-                <p>Директор: Романова Надежда Викторовна</p>
-            </div>
-            <div class="footer-col">
-                <h4>Контакты</h4>
-                <p>📞 <strong>Телефон:</strong> 8 (3522) 23-95-94</p>
-                <p>📧 <strong>E-mail:</strong> kurgan_licey12@kurgan.gov45.ru</p>
-            </div>
-            <div class="footer-col">
-                <h4>Адрес корпуса</h4>
-                <p>📍 г. Курган, микрорайон Утяк, ул. Советская, 41</p>
-                <p>Режим работы: Пн-Сб, с 8:00 до 17:00</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 МБОУ г. Кургана "Лицей № 12". Официальный сайт на платформе GitHub Pages.</p>
-        </div>
+        <p><strong>Адрес:</strong> г. Курган, микрорайон Утяк, ул. Советская, 41</p>
+        <p>📞 Тел: 8 (3522) 23-95-94 | 📧 Email: kurgan_licey12@kurgan.gov45.ru</p>
+        <p style="margin-top:15px; opacity:0.5;">&copy; 2026 Лицей № 12 г. Кургана. GitHub Pages</p>
     </footer>
 
 </body>
 </html>
+
