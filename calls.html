@@ -20,24 +20,43 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            max-width: 500px;
+            max-width: 900px;
             width: 100%;
             text-align: center;
         }
         h1 {
             color: #1a365d;
             font-size: 24px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        .tables-wrapper {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .table-block {
+            flex: 1;
+            min-width: 350px;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
         }
         th, td {
-            padding: 12px;
+            padding: 10px;
             border-bottom: 1px solid #e2e8f0;
-            font-size: 16px;
+            font-size: 15px;
         }
         th {
             background-color: #2b6cb0;
@@ -45,10 +64,10 @@
             font-weight: 600;
         }
         tr:hover {
-            background-color: #f7fafc;
+            background-color: #f1f5f9;
         }
         .back-link {
-            margin-top: 25px;
+            margin-top: 30px;
             display: inline-block;
             color: #2b6cb0;
             text-decoration: none;
@@ -64,52 +83,55 @@
 <div class="container">
     <h1>🔔 Расписание звонков</h1>
     
-    <table>
-        <thead>
-            <tr>
-                <th>Урок</th>
-                <th>Время проведения</th>
-                <th>Перемена</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><b>1 урок</b></td>
-                <td>08:30 – 09:05</td>
-                <td>10 мин</td>
-            </tr>
-            <tr>
-                <td><b>2 урок</b></td>
-                <td>09:15 – 09:50</td>
-                <td>10 мин</td>
-            </tr>
-            <tr>
-                <td><b>3 урок</b></td>
-                <td>10:00 – 10:35</td>
-                <td>10 мин</td>
-            </tr>
-            <tr>
-                <td><b>4 урок</b></td>
-                <td>10:45 – 11:20</td>
-                <td>10 мин</td>
-            </tr>
-            <tr>
-                <td><b>5 урок</b></td>
-                <td>11:30 – 12:05</td>
-                <td>10 мин</td>
-            </tr>
-            <tr>
-                <td><b>6 урок</b></td>
-                <td>12:15 – 12:50</td>
-                <td>10 мин</td>
-            </tr>
-            <tr>
-                <td><b>7 урок</b></td>
-                <td>13:00 – 13:35</td>
-                <td>—</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="tables-wrapper">
+        
+        <!-- ТАБЛИЦА НА 35 МИНУТ -->
+        <div class="table-block">
+            <h3>⏱️ Уроки по 35 минут</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Урок</th>
+                        <th>Время</th>
+                        <th>Перемена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><b>1</b></td><td>08:30 – 09:05</td><td>10 мин</td></tr>
+                    <tr><td><b>2</b></td><td>09:15 – 09:50</td><td>10 мин</td></tr>
+                    <tr><td><b>3</b></td><td>10:00 – 10:35</td><td>10 мин</td></tr>
+                    <tr><td><b>4</b></td><td>10:45 – 11:20</td><td>10 мин</td></tr>
+                    <tr><td><b>5</b></td><td>11:30 – 12:05</td><td>10 мин</td></tr>
+                    <tr><td><b>6</b></td><td>12:15 – 12:50</td><td>10 мин</td></tr>
+                    <tr><td><b>7</b></td><td>13:00 – 13:35</td><td>—</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ТАБЛИЦА НА 40 МИНУТ -->
+        <div class="table-block">
+            <h3>⏱️ Уроки по 40 минут</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Урок</th>
+                        <th>Время</th>
+                        <th>Перемена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><b>1</b></td><td>08:30 – 09:10</td><td>10 мин</td></tr>
+                    <tr><td><b>2</b></td><td>09:20 – 10:00</td><td>10 мин</td></tr>
+                    <tr><td><b>3</b></td><td>10:10 – 10:50</td><td>10 мин</td></tr>
+                    <tr><td><b>4</b></td><td>11:00 – 11:40</td><td>10 мин</td></tr>
+                    <tr><td><b>5</b></td><td>11:50 – 12:30</td><td>10 мин</td></tr>
+                    <tr><td><b>6</b></td><td>12:40 – 13:20</td><td>10 мин</td></tr>
+                    <tr><td><b>7</b></td><td>13:30 – 14:10</td><td>—</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
 
     <a href="index.html" class="back-link">← На главную страницу</a>
 </div>
